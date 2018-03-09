@@ -1,0 +1,11 @@
+#!/bin/bash
+
+step "install dependencies"
+npm install
+
+step "link dev tools"
+ln -s "/app/tools/reload" /usr/bin/reload
+ln -s "/app/tools/reload" /usr/bin/restart
+
+step "run"
+logger express npm run apollo
